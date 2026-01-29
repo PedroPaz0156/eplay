@@ -1,5 +1,6 @@
 import Section from '../Section'
 import { Items, Item, Action, Modal, ModalContent, Icon } from './styles'
+import { GalleryItem } from '../../pages/Home'
 
 import zelda from '../../assets/images/zelda.png'
 import resident from '../../assets/images/resident.png'
@@ -7,11 +8,6 @@ import play from '../../assets/images/Play.png'
 import zoom from '../../assets/images/Zoom.svg'
 import close from '../../assets/images/close.png'
 import { useState } from 'react'
-
-interface GalleryItem {
-  type: 'image' | 'video'
-  url: string
-}
 
 const mock: GalleryItem[] = [
   {

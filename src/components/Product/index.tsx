@@ -6,7 +6,8 @@ type Props = {
   category: string
   system: string
   description: string
-  infos: string[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  infos: any[]
   image: string
 }
 
@@ -17,19 +18,28 @@ const Product = ({
   description,
   infos,
   image
-}: Props) => (
-  <Card>
-    <img src={image} />
-    <Infos>
-      {infos.map((info) => (
-        <Tag key={info}>{info}</Tag>
-      ))}
-    </Infos>
-    <Titulo>{title}</Titulo>
-    <Tag>{category}</Tag>
-    <Tag>{system}</Tag>
-    <Descricao>{description}</Descricao>
-  </Card>
-)
+}: Props) => {
+  const getDescription = (descricao: string) => {
+    if (descricao.length > 95) {
+      descricao.slice(0, 92) + '...'
+    }
+    return descricao
+  }
+
+  return (
+    <Card>
+      <img src={image} />
+      <Infos>
+        {infos.map((info) => (
+          <Tag key={info}>{info}</Tag>
+        ))}
+      </Infos>
+      <Titulo>{title}</Titulo>
+      <Tag>{category}</Tag>
+      <Tag>{system}</Tag>
+      <Descricao>{getDescription(description)}</Descricao>
+    </Card>
+  )
+}
 
 export default Product
