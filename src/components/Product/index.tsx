@@ -18,7 +18,7 @@ const Product = ({
   description,
   infos
 }: Props) => (
-  <div>
+  <Card>
     <img src={image} alt={title} />
     <Infos>
       {infos.map((info) => (
@@ -29,7 +29,7 @@ const Product = ({
     <Tag>{category}</Tag>
     <Tag>{system}</Tag>
     <Descricao>{description}</Descricao>
-  </div>
+  </Card>
 )
 
 export default Product
