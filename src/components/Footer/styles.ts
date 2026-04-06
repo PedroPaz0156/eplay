@@ -16,6 +16,7 @@ export const SectionTitle = styled.h4`
 export const Links = styled.ul`
   display: flex;
   margin-top: 16px;
+  list-style: none;
 `
 
 export const Link = styled.a`
