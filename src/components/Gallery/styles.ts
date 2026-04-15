@@ -3,6 +3,7 @@ import { Cores } from '../../styles'
 
 export const Items = styled.ul`
   display: flex;
+  list-style: none;
 `
 
 export const Action = styled.div`
@@ -11,12 +12,12 @@ export const Action = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0, 0.73)
+  background-color: rgba(0, 0, 0, 0.73);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
 `
 
 export const Item = styled.li`
@@ -44,7 +45,7 @@ export const Modal = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height; 100%;
+  height: 100%;
   z-index: 1;
   display: none;
   align-items: center;
@@ -60,7 +61,7 @@ export const Modal = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0, 0.73)
+    background-color: rgba(0, 0, 0, 0.73);
   }
 `
 

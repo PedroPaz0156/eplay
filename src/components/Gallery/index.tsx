@@ -1,8 +1,6 @@
 import Section from '../Section'
 import { Items, Item, Action, Modal, ModalContent } from './styles'
 
-import zelda from '../../assets/images/zelda.png'
-import spiderman from '../../assets/images/banner-homem-aranha.png'
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
 import close from '../../assets/images/fechar.png'
@@ -25,8 +23,6 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
     type: 'image',
     url: ''
   })
-  const [modalIsVisible, setModalIsVisible] = useState(false)
-  const [modalUrl, setModalUrl] = useState('')
 
   const getMediaCover = (item: GalleryItem) => {
     if (item.type === 'image') return item.url
@@ -75,18 +71,21 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
           ))}
         </Items>
       </Section>
-      <Modal className={modalIsVisible ? 'visible' : ''}>
+      <Modal className={modal.isVisible ? 'visible' : ''}>
         <ModalContent className="container">
           <header>
             <h4>{name}</h4>
-            <img src={close} alt="Ícone de fechar" />
+            <img
+              src={close}
+              alt="Ícone de fechar"
+              onClick={() => closeModal()}
+            />
           </header>
           {modal.type === 'image' ? (
             <img src={modal.url} />
           ) : (
             <iframe src={modal.url} frameBorder={0} />
           )}
-          <img src={modalUrl} />
         </ModalContent>
         <div className="overlay" onClick={() => closeModal()}></div>
       </Modal>

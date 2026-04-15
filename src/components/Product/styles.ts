@@ -4,9 +4,12 @@ import { TagContainer } from '../Tag/styles'
 import { Link } from 'react-router-dom'
 
 export const Card = styled(Link)`
+  text-decoration: none;
+  color: inherit;
   background-color: ${Cores.cinza};
   padding: 8px;
   border-radius: 8px;
+  display: block;
   position: relative;
 
   ${TagContainer} {

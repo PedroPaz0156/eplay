@@ -25,19 +25,22 @@ const Product = () => {
     <>
       <Hero game={game} />
       <Section title="Sobre o jogo" background="black">
-        <p>
-          {game.description}
-        </p>
+        <p>{game.description}</p>
       </Section>
       <Section title="Mais detalhes" background="gray">
         <p>
           <b>Plataforma:</b> {game.details.system} <br />
           <b>Desenvolvedor:</b> {game.details.developer} <br />
           <b>Editora:</b> {game.details.publisher} <br />
-          <b>Idiomas:</b> O jogo oferece suporte a diversos idiomas, incluindo {game.details.languages.join(', ')}
+          <b>Idiomas:</b> O jogo oferece suporte a diversos idiomas, incluindo{' '}
+          {game.details.languages.join(', ')}
         </p>
       </Section>
-      <Gallery name={game.name} defaultCover={game.media.cover} items={game.media.gallery}/>
+      <Gallery
+        name={game.name}
+        defaultCover={game.media.cover}
+        items={game.media.gallery}
+      />
     </>
   )
 }

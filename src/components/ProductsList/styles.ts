@@ -20,6 +20,7 @@ export const List = styled.ul`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 24px;
   margin-top: 40px;
+  list-style: none;
 `
 
 export const Title = styled.h2`
