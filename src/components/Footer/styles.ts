@@ -5,6 +5,7 @@ import { HashLink } from 'react-router-hash-link'
 import { Cores } from '../../styles'
 
 export const Container = styled.footer`
+  margin-top: 40px;
   background-color: ${Cores.cinza};
   padding: 32px 0px;
   font-size: 14px;

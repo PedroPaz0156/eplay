@@ -9,19 +9,19 @@ const Footer = () => (
         <SectionTitle>Categorias</SectionTitle>
         <Links>
           <li>
-            <Link to='/categories#rpg'>RPG</Link>
+            <Link to="/categories#rpg">RPG</Link>
           </li>
           <li>
-            <Link to='/categories#action'>Ação</Link>
+            <Link to="/categories#action">Ação</Link>
           </li>
           <li>
-            <Link to='/categories#fight'>Luta</Link>
+            <Link to="/categories#fight">Luta</Link>
           </li>
           <li>
-            <Link to='/categories#sports'>Esportes</Link>
+            <Link to="/categories#sports">Esportes</Link>
           </li>
           <li>
-            <Link to='/categories#simulation'>Simulação</Link>
+            <Link to="/categories#simulation">Simulação</Link>
           </li>
         </Links>
       </FooterSection>
@@ -29,10 +29,10 @@ const Footer = () => (
         <SectionTitle>Acesso Rápido</SectionTitle>
         <Links>
           <li>
-            <Link to='/#on-sale'>Promoções</Link>
+            <Link to="/#on-sale">Promoções</Link>
           </li>
           <li>
-            <Link to='/#coming-soon'>Em breve</Link>
+            <Link to="/#coming-soon">Em breve</Link>
           </li>
         </Links>
       </FooterSection>
