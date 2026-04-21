@@ -1,4 +1,3 @@
-import { Game } from '../../pages/Home'
 import Tag from '../Tag'
 import Button from '../Button'
 
